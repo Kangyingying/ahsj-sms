@@ -1,0 +1,87 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #1a355a;
+}
+ul,li,p,dl,dt,dd,ol,form,input,textarea,th,td,select,figure{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: normal;
+    font-style: normal;
+    word-break: break-all;
+}
+.chart-container-bg{
+    background: #1257bb;
+    height: 20%;
+    background: rgba(18, 87, 187, 0.25);
+}
+.margin-right{
+    margin-right: 19px;
+}
+.margin-bottom{
+    margin-bottom: 19px;
+}
+.statistics{
+    position: relative;
+}
+.statistics .title{
+    width: 100%;
+    background: rgba(25, 71, 137, 0.66);
+    height: 28px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 28px;
+    display: flex;
+}
+.title .icon{
+    width: 12px;
+    height: 12px;
+    background: rgba(4, 228, 255, 1);
+    margin: auto 0;
+}
+.title .text{
+    margin-left: 3px;
+}
+.statistics .summary{
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 24px;
+    position: absolute;
+    left: 15px;
+    top: 45px;
+}
+.summary span{
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFD304;
+    line-height: 24px;
+    margin-left: 8px;
+}
+.statistics .chart-container{
+    width: 100%;
+    height: calc(100% - 28px);
+}
+.chart-container .table{
+    width: 100%;
+    align-content: center;
+}
+.table th{
+    font-size: 13px;
+    font-weight: 500;
+    color: #08D4BA;
+    line-height: 24px;
+    text-align: center;
+}
+.table td{
+    font-size: 13px;
+    font-weight: 500;
+    color: #CFE1FB;
+    line-height: 24px;
+    text-align: center;
+}
