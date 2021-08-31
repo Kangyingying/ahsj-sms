@@ -1,9 +1,6 @@
 <template>
   <div class="top-material statistics">
-    <div class="title">
-      <i class="icon"></i>
-      <span class="text">采集定标交易TOP5物料</span>
-    </div>
+    <TitleBar :title="'采集定标交易TOP5物料'"></TitleBar>
     <!--  图表容器  -->
     <div class="chart-container">
         <table border="0" class="table">
@@ -51,9 +48,14 @@
 </template>
 
 <script>
-import {mixins} from "vue-class-component";
+import {mixins, Options} from "vue-class-component";
 import {TopMaterialViewModel} from "@/components/Statistics/Table/TopMaterial/TopMaterialViewModel";
-
+import TitleBar from '@/components/Statistics/TitleBar/TitleBar.vue';
+@Options({
+  components: {
+    TitleBar
+  }
+})
 export default class TopMaterial extends mixins(TopMaterialViewModel){
 }
 </script>

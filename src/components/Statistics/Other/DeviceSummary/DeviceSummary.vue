@@ -56,9 +56,14 @@
 </template>
 
 <script>
-import {mixins} from "vue-class-component";
+import {mixins, Options} from "vue-class-component";
 import {DeviceSummaryViewModel} from "@/components/Statistics/Other/DeviceSummary/DeviceSummaryViewModel";
-
+import TitleBar from '@/components/Statistics/TitleBar/TitleBar.vue';
+@Options({
+  components: {
+    TitleBar
+  }
+})
 export default class DeviceSummary extends mixins(DeviceSummaryViewModel){
 }
 </script>
@@ -82,7 +87,7 @@ export default class DeviceSummary extends mixins(DeviceSummaryViewModel){
   .item .icon{
     width: 40px;
     height: 40px;
-    background: #08D4BA;
+    border: 1px solid #08D4BA;
   }
   .item .meta{
     margin-left: 14px;

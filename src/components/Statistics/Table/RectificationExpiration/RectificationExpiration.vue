@@ -1,9 +1,6 @@
 <template>
   <div class="rectification-expiration statistics">
-    <div class="title">
-      <i class="icon"></i>
-      <span class="text">安全整改到期预警</span>
-    </div>
+    <TitleBar :title="'安全整改到期预警'"></TitleBar>
     <p class="summary" style="top: 30px">总计 <span>100</span> </p>
     <div class="chart-container">
       <table border="0" class="table" style="margin-top: 40px">
@@ -50,9 +47,14 @@
 </template>
 
 <script>
-import {mixins} from "vue-class-component";
+import {mixins, Options} from "vue-class-component";
 import {RectificationExpirationViewModel} from "@/components/Statistics/Table/RectificationExpiration/RectificationExpirationViewModel";
-
+import TitleBar from '@/components/Statistics/TitleBar/TitleBar.vue';
+@Options({
+  components: {
+    TitleBar
+  }
+})
 export default class RectificationExpiration extends mixins(RectificationExpirationViewModel){
 }
 </script>

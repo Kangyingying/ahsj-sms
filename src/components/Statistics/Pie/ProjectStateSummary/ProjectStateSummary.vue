@@ -1,9 +1,6 @@
 <template>
   <div class="project-state-summary statistics">
-    <div class="title">
-      <i class="icon"></i>
-      <span class="text">项目状态统计</span>
-    </div>
+    <TitleBar :title="'项目状态统计'"></TitleBar>
     <p class="summary">总计 <span>300</span> </p>
     <!--  图表容器  -->
     <div class="chart-container"></div>
@@ -12,9 +9,14 @@
 </template>
 
 <script>
-import {mixins} from "vue-class-component";
+import {mixins, Options} from "vue-class-component";
 import {ProjectStateSummaryViewModel} from "@/components/Statistics/Pie/ProjectStateSummary/ProjectStateSummaryViewModel";
-
+import TitleBar from '@/components/Statistics/TitleBar/TitleBar.vue';
+@Options({
+  components: {
+    TitleBar
+  }
+})
 export default class ProjectStateSummary extends mixins(ProjectStateSummaryViewModel){
 }
 </script>
