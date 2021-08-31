@@ -5,7 +5,6 @@ export class CustomSwitchViewModel extends Vue {
     selectedIndex = 0;
 
     mounted() {
-        console.debug(this.datalist);
     }
 
     changeSwitch(item: any, index: any) {
