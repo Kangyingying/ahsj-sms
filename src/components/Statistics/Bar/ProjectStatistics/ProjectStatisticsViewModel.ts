@@ -3,29 +3,13 @@
  */
 import {Vue} from 'vue-class-component';
 import * as echarts from 'echarts/core';
-import {
-    BarChart,
-    // 系列类型的定义后缀都为 SeriesOption
-    BarSeriesOption,
-    LineSeriesOption
-} from 'echarts/charts';
-import {
-    // 组件类型的定义后缀都为 ComponentOption
-    TitleComponentOption,
-    GridComponent,
-    GridComponentOption, TooltipComponent, LegendComponent
-} from 'echarts/components';
-import {
-    CanvasRenderer
-} from 'echarts/renderers';
+import {BarChart, BarSeriesOption} from 'echarts/charts';
+import {GridComponent, GridComponentOption, LegendComponent, TitleComponentOption} from 'echarts/components';
+import {CanvasRenderer} from 'echarts/renderers';
 // 通过 ComposeOption 来组合出一个只有必须组件和图表的 Option 类型
-type ECOption = echarts.ComposeOption<
-    BarSeriesOption | LineSeriesOption | TitleComponentOption | GridComponentOption
-    >;
+type ECOption = echarts.ComposeOption<BarSeriesOption | TitleComponentOption | GridComponentOption>;
 // 注册必须的组件
-echarts.use(
-    [GridComponent, LegendComponent, BarChart, CanvasRenderer]
-);
+echarts.use([GridComponent, LegendComponent, BarChart, CanvasRenderer]);
 
 export class ProjectStatisticsViewModel extends Vue {
 
@@ -43,9 +27,6 @@ export class ProjectStatisticsViewModel extends Vue {
         let option: ECOption;
 
         option = {
-            tooltip: {
-                trigger: 'axis'
-            },
             grid: {
                 width: 375,
                 height: 110,
@@ -82,17 +63,23 @@ export class ProjectStatisticsViewModel extends Vue {
             yAxis: [
                 {
                     type: 'value',
+                    min: 0,
+                    max: 30,
+                    interval: 10,
                     axisLine: {
-                        // lineStyle: {
-                        //     color: 'rgba(154, 182, 195, 1)',
-                        // },
-                        show: false
+                        show: true,
+                        lineStyle: {
+                            color: 'rgba(154, 182, 195, 1)',
+                        },
                     },
                     axisLabel: {
                         color: 'rgba(207, 225, 251, 1)',
                         fontSize: 13
                     },
                     axisTick: {
+                        show: false
+                    },
+                    splitLine: {
                         show: false
                     }
                 }
@@ -103,14 +90,14 @@ export class ProjectStatisticsViewModel extends Vue {
                     type: 'bar',
                     data: [25, 25, 25, 25, 25, 25, 25],
                     color: 'rgba(49, 88, 255, 1)',
-                    barWidth: 20,
+                    barWidth: 10,
                 },
                 {
                     name: '施工项目',
                     type: 'bar',
                     data: [30, 30, 30, 30, 30, 30, 30],
                     color: 'rgba(8, 212, 186, 1)',
-                    barWidth: 20,
+                    barWidth: 10,
 
                 }
             ]

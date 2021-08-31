@@ -22,6 +22,6 @@ import Navigation from '@/components/Navigation/Navigation.vue'
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
   height: 100%;
-  overflow: scroll;
+  overflow: auto;
 }
 </style>

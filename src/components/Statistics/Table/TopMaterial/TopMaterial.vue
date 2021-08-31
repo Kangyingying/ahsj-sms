@@ -61,6 +61,6 @@ export default class TopMaterial extends mixins(TopMaterialViewModel){
 <style scoped>
 .top-material{
   width: 412px;
-  height: 177px;
+  height: 185px;
 }
 </style>

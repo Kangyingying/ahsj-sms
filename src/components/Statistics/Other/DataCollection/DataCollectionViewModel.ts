@@ -3,4 +3,4 @@
  */
 import {Vue} from 'vue-class-component';
 
-export class SummaryViewModel extends Vue {}
+export class DataCollectionViewModel extends Vue {}

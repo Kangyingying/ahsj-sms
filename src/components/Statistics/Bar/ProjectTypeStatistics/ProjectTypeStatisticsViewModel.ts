@@ -3,28 +3,13 @@
  */
 import {Vue} from 'vue-class-component';
 import * as echarts from 'echarts/core';
-import {
-    BarChart,
-    // 系列类型的定义后缀都为 SeriesOption
-    BarSeriesOption
-} from 'echarts/charts';
-import {
-    // 组件类型的定义后缀都为 ComponentOption
-    TitleComponentOption,
-    GridComponent,
-    GridComponentOption, LegendComponent
-} from 'echarts/components';
-import {
-    CanvasRenderer
-} from 'echarts/renderers';
+import {BarChart, BarSeriesOption} from 'echarts/charts';
+import {GridComponent, GridComponentOption, LegendComponent, TitleComponentOption} from 'echarts/components';
+import {CanvasRenderer} from 'echarts/renderers';
 // 通过 ComposeOption 来组合出一个只有必须组件和图表的 Option 类型
-type ECOption = echarts.ComposeOption<
-    BarSeriesOption | TitleComponentOption | GridComponentOption
-    >;
+type ECOption = echarts.ComposeOption<BarSeriesOption | TitleComponentOption | GridComponentOption>;
 // 注册必须的组件
-echarts.use(
-    [GridComponent, LegendComponent, BarChart, CanvasRenderer]
-);
+echarts.use([GridComponent, LegendComponent, BarChart, CanvasRenderer]);
 
 export class ProjectTypeStatisticsViewModel extends Vue {
 
@@ -58,11 +43,18 @@ export class ProjectTypeStatisticsViewModel extends Vue {
                 },
                 axisTick: {
                     show: false
+                },
+                splitLine: {
+                    show: false
                 }
             },
             yAxis: {
                 type: 'value',
+                min: 0,
+                max: 30,
+                interval: 10,
                 axisLine: {
+                    show: true,
                     lineStyle: {
                         color: 'rgba(154, 182, 195, 1)',
                     },
@@ -73,13 +65,16 @@ export class ProjectTypeStatisticsViewModel extends Vue {
                 },
                 axisTick: {
                     show: false
+                },
+                splitLine: {
+                    show: false
                 }
             },
             series: [{
                 data: [30, 10, 5, 30, 5, 30, 5],
                 type: 'bar',
                 color: 'rgba(8, 212, 186, 1)',
-                barWidth: 20,
+                barWidth: 22,
             }]
         };
         if (option) {
