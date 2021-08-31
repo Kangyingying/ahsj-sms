@@ -1,25 +1,17 @@
 /**
  * 设备来源汇总图表vm
  */
-import {Vue} from 'vue-class-component';
-import * as echarts from 'echarts/core';
-import {GridComponent, GridComponentOption, LegendComponent, TitleComponentOption} from 'echarts/components';
-import {PieChart, PieSeriesOption} from 'echarts/charts';
-import {CanvasRenderer} from 'echarts/renderers';
-type ECOption = echarts.ComposeOption<TitleComponentOption | GridComponentOption | PieSeriesOption>;
-echarts.use([GridComponent, LegendComponent, CanvasRenderer, PieChart]);
+import {BaseChartViewModel} from '@/components/Statistics/BaseChartViewModel';
 
-export class DeviceSourceSummaryViewModel extends Vue {
-  mounted() {
-    this.initChart();
-  }
+export class DeviceSourceSummaryViewModel extends BaseChartViewModel {
 
   initChart() {
-    const chartDom = document.querySelector('.device-source-summary .chart-container') as HTMLElement;
-    const myChart = echarts.init(chartDom);
-    let option: ECOption;
+    this.chartContainer = document.querySelector('.device-source-summary .chart-container') as HTMLElement;
+    this.myChart = this.echarts.init(this.chartContainer);
+  }
 
-    option = {
+  setOption() {
+    const option = {
       grid: {
         bottom: 30,
         left: 30,
@@ -31,6 +23,8 @@ export class DeviceSourceSummaryViewModel extends Vue {
           color: '#ffffff',
           fontSize: 10
         },
+        icon: 'circle',
+        itemWidth: 5
       },
       color: ['#3158FF', '#E18B54'],
       series: [
@@ -57,7 +51,7 @@ export class DeviceSourceSummaryViewModel extends Vue {
     };
 
     if (option) {
-      myChart.setOption(option);
+      this.myChart.setOption(option);
     }
   }
 }

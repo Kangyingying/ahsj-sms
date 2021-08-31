@@ -1,27 +1,19 @@
 /**
  * 整改通知汇总
  */
-import {Vue} from 'vue-class-component';
-import * as echarts from 'echarts/core';
-import {BarChart, BarSeriesOption} from 'echarts/charts';
-import {GridComponent, GridComponentOption, LegendComponent, TitleComponentOption} from 'echarts/components';
-import {CanvasRenderer} from 'echarts/renderers';
-// 通过 ComposeOption 来组合出一个只有必须组件和图表的 Option 类型
-type ECOption = echarts.ComposeOption<BarSeriesOption | TitleComponentOption | GridComponentOption>;
-// 注册必须的组件
-echarts.use([GridComponent, LegendComponent, BarChart, CanvasRenderer]);
+import {BaseChartViewModel} from '@/components/Statistics/BaseChartViewModel';
 
-export class RectificationNoticesSummaryViewModel extends Vue {
-  mounted() {
-    this.initChart();
-  }
+export class RectificationNoticesSummaryViewModel extends BaseChartViewModel {
 
   initChart() {
-    const chartDom = document.querySelector('.rectification-notices-summary .chart-container') as HTMLElement;
-    const myChart = echarts.init(chartDom);
-    let option: ECOption;
+    this.chartContainer = document.querySelector('.rectification-notices-summary .chart-container') as HTMLElement;
+    this.myChart = this.echarts.init(this.chartContainer);
+  }
 
-    option = {
+  setOption() {
+    super.setOption();
+
+    const option = {
       legend: {
         data: ['总量', '已回复'],
         textStyle: {
@@ -29,6 +21,8 @@ export class RectificationNoticesSummaryViewModel extends Vue {
           fontSize: 10
         },
         x: 'right',
+        itemWidth: 17,
+        itemHeight: 6
       },
       grid: {
         width: 240,
@@ -114,7 +108,7 @@ export class RectificationNoticesSummaryViewModel extends Vue {
     };
 
     if (option) {
-      myChart.setOption(option);
+      this.myChart.setOption(option);
     }
 
   }

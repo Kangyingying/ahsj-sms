@@ -1,28 +1,18 @@
 /**
  * 项目类型统计图表 vm
  */
-import {Vue} from 'vue-class-component';
-import * as echarts from 'echarts/core';
-import {BarChart, BarSeriesOption} from 'echarts/charts';
-import {GridComponent, GridComponentOption, LegendComponent, TitleComponentOption} from 'echarts/components';
-import {CanvasRenderer} from 'echarts/renderers';
-// 通过 ComposeOption 来组合出一个只有必须组件和图表的 Option 类型
-type ECOption = echarts.ComposeOption<BarSeriesOption | TitleComponentOption | GridComponentOption>;
-// 注册必须的组件
-echarts.use([GridComponent, LegendComponent, BarChart, CanvasRenderer]);
+import {BaseChartViewModel} from '@/components/Statistics/BaseChartViewModel';
 
-export class ProjectTypeStatisticsViewModel extends Vue {
-
-    mounted() {
-        this.initChart();
-    }
+export class ProjectTypeStatisticsViewModel extends BaseChartViewModel {
 
     initChart() {
-        const chartDom = document.querySelector('.project-type-statistics .chart-container') as HTMLElement;
-        const myChart = echarts.init(chartDom);
-        let option: ECOption;
+        this.chartContainer = document.querySelector('.project-type-statistics .chart-container') as HTMLElement;
+        this.myChart = this.echarts.init(this.chartContainer);
+    }
 
-        option = {
+    setOption() {
+        super.setOption();
+        const option = {
             grid: {
                 width: 375,
                 height: 110,
@@ -83,7 +73,7 @@ export class ProjectTypeStatisticsViewModel extends Vue {
             }]
         };
         if (option) {
-            myChart.setOption(option);
+            this.myChart.setOption(option);
         }
     }
 }

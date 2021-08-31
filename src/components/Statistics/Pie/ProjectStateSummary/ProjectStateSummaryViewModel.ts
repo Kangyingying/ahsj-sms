@@ -1,23 +1,17 @@
 /**
  * 项目状态汇总图表 vm
  */
-import {Vue} from 'vue-class-component';
-import * as echarts from 'echarts/core';
-import {GridComponent, GridComponentOption, LegendComponent, TitleComponentOption} from 'echarts/components';
-import {PieChart, PieSeriesOption} from 'echarts/charts';
-import {CanvasRenderer} from 'echarts/renderers';
-type ECOption = echarts.ComposeOption<TitleComponentOption | GridComponentOption | PieSeriesOption>;
-echarts.use([GridComponent, LegendComponent, CanvasRenderer, PieChart]);
-export class ProjectStateSummaryViewModel extends Vue {
-    mounted() {
-        this.initChart();
-    }
+import {BaseChartViewModel} from '@/components/Statistics/BaseChartViewModel';
+
+export class ProjectStateSummaryViewModel extends BaseChartViewModel {
 
     initChart() {
-        const chartDom = document.querySelector('.project-state-summary .chart-container') as HTMLElement;
-        const myChart = echarts.init(chartDom);
-        let option: ECOption;
-        option = {
+        this.chartContainer = document.querySelector('.project-state-summary .chart-container') as HTMLElement;
+        this.myChart = this.echarts.init(this.chartContainer);
+    }
+
+    setOption() {
+        const option = {
             color: ['#08D4BA', '#3158FF', '#E18B54',  '#F05C92'],
             legend: {
                 orient: 'vertical',
@@ -54,9 +48,9 @@ export class ProjectStateSummaryViewModel extends Vue {
                 }
             ]
         };
-        if (option) {
-            myChart.setOption(option);
-        }
 
+        if (option) {
+            this.myChart.setOption(option);
+        }
     }
 }

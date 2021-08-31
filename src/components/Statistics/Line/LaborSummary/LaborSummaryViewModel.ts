@@ -1,27 +1,18 @@
 /**
  * 劳务用工汇总图表vm
  */
-import {Vue} from 'vue-class-component';
-import * as echarts from 'echarts/core';
-import {LineChart, LineSeriesOption} from 'echarts/charts';
-import {GridComponent, GridComponentOption, LegendComponent, TitleComponentOption} from 'echarts/components';
-import {CanvasRenderer} from 'echarts/renderers';
-// 通过 ComposeOption 来组合出一个只有必须组件和图表的 Option 类型
-type ECOption = echarts.ComposeOption<LineSeriesOption | TitleComponentOption | GridComponentOption>;
-// 注册必须的组件
-echarts.use([GridComponent, LegendComponent, LineChart, CanvasRenderer]);
+import {BaseChartViewModel} from '@/components/Statistics/BaseChartViewModel';
 
-export class LaborSummaryViewModel extends Vue {
-  mounted() {
-    this.initChart();
-  }
+export class LaborSummaryViewModel extends BaseChartViewModel {
 
   initChart() {
-    const chartDom = document.querySelector('.labor-summary .chart-container') as HTMLElement;
-    const myChart = echarts.init(chartDom);
-    let option: ECOption;
+    this.chartContainer = document.querySelector('.labor-summary .chart-container') as HTMLElement;
+    this.myChart = this.echarts.init(this.chartContainer);
+  }
 
-    option = {
+  setOption() {
+    super.setOption();
+    const option = {
       grid: {
         width: 375,
         height: 50,
@@ -87,7 +78,8 @@ export class LaborSummaryViewModel extends Vue {
     };
 
     if (option) {
-      myChart.setOption(option);
+      this.myChart.setOption(option);
     }
   }
+
 }

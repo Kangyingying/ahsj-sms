@@ -88,6 +88,14 @@ export default class Navigation extends mixins(NavigationViewModel){
     display: flex;
     position: relative;
   }
+  .navigation .title{
+    font-size: 28px;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 65px;
+    margin: 0;
+    padding: 0;
+  }
   /*tabs*/
   .navigation .tabs{
     list-style: none;
