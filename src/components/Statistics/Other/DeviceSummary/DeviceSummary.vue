@@ -1,9 +1,6 @@
 <template>
   <div class="device-summary statistics">
-    <div class="title">
-      <i class="icon"></i>
-      <span class="text">设备数量统计</span>
-    </div>
+    <TitleBar :title="'设备数量统计'"></TitleBar>
 
     <div class="chart-container">
       <ul class="device-count-list">
