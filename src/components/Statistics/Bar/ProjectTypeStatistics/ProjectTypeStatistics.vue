@@ -4,7 +4,7 @@
       <i class="icon"></i>
       <span class="text">项目类型</span>
     </div>
-    <p class="summary">总计 <span>100</span> </p>
+    <p class="summary">总计 <span>300</span> </p>
     <!--  图表容器  -->
     <div class="chart-container"></div>
   </div>

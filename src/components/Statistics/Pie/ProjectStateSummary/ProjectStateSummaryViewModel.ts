@@ -18,11 +18,7 @@ export class ProjectStateSummaryViewModel extends Vue {
         const myChart = echarts.init(chartDom);
         let option: ECOption;
         option = {
-            grid: {
-                bottom: 30,
-                left: 30,
-            },
-            color: ['#E18B54', '#08D4BA', '#3158FF', '#F05C92'],
+            color: ['#08D4BA', '#3158FF', '#E18B54',  '#F05C92'],
             legend: {
                 orient: 'vertical',
                 right: 'right',
@@ -30,19 +26,19 @@ export class ProjectStateSummaryViewModel extends Vue {
                     color: '#ffffff',
                     fontSize: 10
                 },
+                icon: 'circle',
+                itemWidth: 5
             },
             series: [
                 {
-                    name: '访问来源',
+                    name: '项目状态统计',
                     type: 'pie',
                     radius: '55%',
-                    center: ['50%', '50%'],
+                    center: ['50%', '60%'],
                     data: [
-                        {value: 335, name: '直接访问'},
-                        {value: 310, name: '邮件营销'},
-                        {value: 274, name: '联盟广告'},
-                        {value: 235, name: '视频广告'},
-                        // {value: 400, name: '搜索引擎'}
+                        {value: 120, name: '在建项目数'},
+                        {value: 100, name: '等待竣工验收项目数'},
+                        {value: 80, name: '竣工项目数'},
                     ].sort(function (a, b) {
                         return a.value - b.value;
                     }),

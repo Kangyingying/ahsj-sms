@@ -31,7 +31,7 @@ export class ProjectTypeStatisticsViewModel extends Vue {
             },
             xAxis: {
                 type: 'category',
-                data: ['项目一', '项目一', '项目一', '项目一', '项目一', '项目一', '项目一'],
+                data: ['EPC总承包', 'D-B总承包', 'P-C总承包', 'E-P总承包'],
                 axisLine: {
                     lineStyle: {
                         color: 'rgba(154, 182, 195, 1)',
@@ -51,8 +51,8 @@ export class ProjectTypeStatisticsViewModel extends Vue {
             yAxis: {
                 type: 'value',
                 min: 0,
-                max: 30,
-                interval: 10,
+                max: 300,
+                interval: 50,
                 axisLine: {
                     show: true,
                     lineStyle: {
@@ -71,10 +71,15 @@ export class ProjectTypeStatisticsViewModel extends Vue {
                 }
             },
             series: [{
-                data: [30, 10, 5, 30, 5, 30, 5],
+                data: [218, 25, 45, 12],
                 type: 'bar',
                 color: 'rgba(8, 212, 186, 1)',
                 barWidth: 22,
+                label: {
+                    show: true,
+                    position: 'top',
+                    color: 'rgba(8, 212, 186, 1)'
+                },
             }]
         };
         if (option) {

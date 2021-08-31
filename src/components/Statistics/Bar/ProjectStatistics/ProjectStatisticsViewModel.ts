@@ -45,7 +45,7 @@ export class ProjectStatisticsViewModel extends Vue {
             xAxis: [
                 {
                     type: 'category',
-                    data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
+                    data: ['2021'],
                     axisLine: {
                         lineStyle: {
                             color: 'rgba(154, 182, 195, 1)',
@@ -64,8 +64,8 @@ export class ProjectStatisticsViewModel extends Vue {
                 {
                     type: 'value',
                     min: 0,
-                    max: 30,
-                    interval: 10,
+                    max: 400,
+                    interval: 200,
                     axisLine: {
                         show: true,
                         lineStyle: {
@@ -88,16 +88,26 @@ export class ProjectStatisticsViewModel extends Vue {
                 {
                     name: '中标项目',
                     type: 'bar',
-                    data: [25, 25, 25, 25, 25, 25, 25],
+                    data: [300],
                     color: 'rgba(49, 88, 255, 1)',
                     barWidth: 10,
+                    label: {
+                        show: true,
+                        position: 'top',
+                        color: 'rgba(49, 88, 255, 1)'
+                    },
                 },
                 {
                     name: '施工项目',
                     type: 'bar',
-                    data: [30, 30, 30, 30, 30, 30, 30],
+                    data: [260],
                     color: 'rgba(8, 212, 186, 1)',
                     barWidth: 10,
+                    label: {
+                        show: true,
+                        position: 'top',
+                        color: 'rgba(8, 212, 186, 1)'
+                    },
 
                 }
             ]

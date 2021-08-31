@@ -89,7 +89,10 @@ export class RectificationNoticesSummaryViewModel extends Vue {
           emphasis: {
             focus: 'series'
           },
-
+          label: {
+            show: true,
+            position: 'inside',
+          },
           color: '#E18B54',
           data: [20, 5, 10, 6, 15]
         },
@@ -101,7 +104,11 @@ export class RectificationNoticesSummaryViewModel extends Vue {
             focus: 'series'
           },
           color: '#08D4BA',
-          data: [5, 5, 5, 5, 5]
+          data: [5, 5, 5, 5, 5],
+          label: {
+            show: true,
+            position: 'inside',
+          },
         },
       ]
     };
