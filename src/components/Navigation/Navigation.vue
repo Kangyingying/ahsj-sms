@@ -2,7 +2,7 @@
   <div class="navigation">
     <div class="content">
       <!-- 标题-->
-      <h3 class="title">安徽四建控股集团有限公司智慧工地监管管理平台</h3>
+      <h3 class="title">安徽四建智慧工地监管管理平台</h3>
       <!-- 顶部导航  -->
       <ul class="tabs">
         <li class="tab-item">
@@ -80,10 +80,10 @@ export default class Navigation extends mixins(NavigationViewModel){
     padding: 0 20px;
     background: #1c3669;
     color: #ffffff;
+    min-width: 1875px;
   }
   .navigation .content{
     width: 100%;
-    min-width: 1875px;
     height: 65px;
     display: flex;
     position: relative;
