@@ -1,6 +1,6 @@
 <template>
   <div class="project-statistics statistics">
-   <TitleBar :title="'项目分析'"></TitleBar>
+   <TitleBar :title="'项目分析'" :showSwitch="true" :switchData="['本周', '本月', '本年']"></TitleBar>
     <p class="summary">年度项目目标值 <span>389</span> </p>
 <!--  图表容器  -->
     <div class="chart-container"></div>

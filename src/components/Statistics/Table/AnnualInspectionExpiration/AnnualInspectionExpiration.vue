@@ -1,8 +1,9 @@
 <template>
   <div class="annual-inspection-expiration statistics">
-    <TitleBar :title="'年检到期预警'"></TitleBar>
+    <TitleBar :title="'年检到期预警'" :showMore="true"></TitleBar>
+    <CustomSwitch style="margin-top: 3px; margin-left: 22px" :datalist="['15天', '7天', '3天', '1天']"></CustomSwitch>
     <div class="chart-container">
-      <table border="0" class="table" style="margin-top: 20px">
+      <table border="0" class="table" style="margin-top: 5px">
         <tr style="background: rgba(27, 93, 186, 0.16); border: none">
           <th>项目名称</th>
           <th>设备名称</th>
@@ -48,9 +49,11 @@
 import {mixins, Options} from "vue-class-component";
 import {AnnualInspectionExpirationViewModel} from "@/components/Statistics/Table/AnnualInspectionExpiration/AnnualInspectionExpirationViewModel";
 import TitleBar from '@/components/Statistics/TitleBar/TitleBar.vue';
+import CustomSwitch from '@/components/CustomSwitch/CustomSwitch.vue';
 @Options({
   components: {
-    TitleBar
+    TitleBar,
+    CustomSwitch
   }
 })
 export default class AnnualInspectionExpiration extends mixins(AnnualInspectionExpirationViewModel){
@@ -60,6 +63,6 @@ export default class AnnualInspectionExpiration extends mixins(AnnualInspectionE
 <style scoped>
   .annual-inspection-expiration{
     width: 412px;
-    height: 208px;
+    height: 215px;
   }
 </style>

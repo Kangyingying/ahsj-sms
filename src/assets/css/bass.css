@@ -73,6 +73,7 @@ ul,li,p,dl,dt,dd,ol,form,input,textarea,th,td,select,figure{
     color: #FFFFFF;
     line-height: 28px;
     display: flex;
+    position: relative;
 }
 .title .icon{
     width: 12px;
@@ -83,6 +84,17 @@ ul,li,p,dl,dt,dd,ol,form,input,textarea,th,td,select,figure{
 .title .text{
     margin-left: 3px;
 }
+.title .more{
+    font-size: 13px;
+    font-weight: 500;
+    color: #8CADDB;
+    line-height: 28px;
+}
+.title .right{
+    position: absolute;
+    right: 12px;
+}
+
 .statistics .summary{
     font-size: 16px;
     color: #FFFFFF;
