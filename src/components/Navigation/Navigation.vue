@@ -83,6 +83,7 @@ export default class Navigation extends mixins(NavigationViewModel){
   }
   .navigation .content{
     width: 100%;
+    min-width: 1875px;
     height: 65px;
     display: flex;
     position: relative;
