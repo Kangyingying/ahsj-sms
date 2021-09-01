@@ -22,7 +22,7 @@ export class EmployeeSummaryViewModel extends BaseChartViewModel {
       },
       xAxis: {
         type: 'category',
-        data: ['项目一', '项目一', '项目一', '项目一', '项目一', '项目一', '项目一'],
+        data: ['项目管理中心', '直属项目管理部', '财务中心', '总工办'],
         axisLine: {
           lineStyle: {
             color: 'rgba(154, 182, 195, 1)',
@@ -39,8 +39,8 @@ export class EmployeeSummaryViewModel extends BaseChartViewModel {
       yAxis: {
         type: 'value',
         min: 0,
-        max: 30,
-        interval: 10,
+        max: 300,
+        interval: 50,
         axisLine: {
           show: true,
           lineStyle: {
@@ -60,7 +60,7 @@ export class EmployeeSummaryViewModel extends BaseChartViewModel {
 
       },
       series: [{
-        data: [10, 3, 30, 10, 15, 20, 15],
+        data: [300, 200, 280, 45,],
         type: 'line',
         smooth: true,
         itemStyle: {

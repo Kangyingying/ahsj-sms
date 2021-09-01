@@ -1,7 +1,7 @@
 <template>
   <div class="device-source-summary statistics">
     <TitleBar :title="'设备来源汇总'"></TitleBar>
-    <p class="summary" style="top: 40px;">总计 <span>100</span> </p>
+    <p class="summary" style="top: 40px;">总计 <span>335</span> </p>
 
     <div class="chart-container"></div>
   </div>

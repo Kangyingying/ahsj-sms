@@ -1,7 +1,7 @@
 <template>
   <div class="employee-summary statistics">
     <TitleBar :title="'职工汇总'"></TitleBar>
-    <p class="summary" style="top: 30px">总计 <span>100</span> </p>
+    <p class="summary" style="top: 30px">总计 <span>2800</span> </p>
 
     <div class="chart-container"></div>
   </div>

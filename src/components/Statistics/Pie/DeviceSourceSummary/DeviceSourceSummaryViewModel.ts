@@ -26,15 +26,15 @@ export class DeviceSourceSummaryViewModel extends BaseChartViewModel {
         icon: 'circle',
         itemWidth: 5
       },
-      color: ['#3158FF', '#E18B54'],
+      color: ['#E18B54', '#3158FF'],
       series: [
         {
           name: '设备来源统计',
           type: 'pie',
           radius: '50%',
           data: [
-            {value: 40, name: '租赁'},
-            {value: 60, name: '采购'},
+            {value: 200, name: '采购'},
+            {value: 135, name: '租赁'},
           ],
           emphasis: {
             itemStyle: {

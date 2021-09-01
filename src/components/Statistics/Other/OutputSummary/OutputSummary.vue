@@ -9,16 +9,16 @@
 
       <div class="output">
         <div class="icon"></div>
-        <span>总产值(10亿)</span>
-        <span class="color" style="margin-left: 29px"><span class="amount">8</span>亿</span>
-        <span class="color" style="margin-left: 32px"><span class="amount">80</span>%</span>
+        <span>总产值(180亿)</span>
+        <span class="color" style="margin-left: 16px"><span class="amount">138</span>亿</span>
+        <span class="color" style="margin-left: 32px"><span class="amount">76.67</span>%</span>
       </div>
 
       <div class="output" style="">
         <div class="icon"></div>
-        <span>合同金额(10亿)</span>
-        <span class="color" style="margin-left: 16px"><span class="amount">8</span>亿</span>
-        <span class="color" style="margin-left: 32px"><span class="amount">80</span>%</span>
+        <span>合同金额(180亿)</span>
+        <span class="color" style="margin-left: 5px"><span class="amount">148</span>亿</span>
+        <span class="color" style="margin-left: 25px"><span class="amount">82.22</span>%</span>
       </div>
     </div>
   </div>
@@ -40,7 +40,7 @@ export default class OutputSummary extends mixins(OutputSummaryViewModel){
 
 <style scoped>
 .output-summary{
-  width: 240px;
+  width: 290px;
   height: 140px;
 }
   .output-summary .chart-container{

@@ -7,43 +7,36 @@
         <li class="item">
           <div class="icon"></div>
           <div class="meta">
-            <p class="count">5</p>
-            <p class="name">塔式起重机</p>
-          </div>
-        </li>
-        <li class="item">
-          <div class="icon"></div>
-          <div class="meta">
-            <p class="count">2</p>
-            <p class="name">铲运机</p>
-          </div>
-        </li>
-        <li class="item">
-          <div class="icon"></div>
-          <div class="meta">
-            <p class="count">5</p>
-            <p class="name">混凝土搅拌运输车</p>
-          </div>
-        </li>
-        <li class="item">
-          <div class="icon"></div>
-          <div class="meta">
-            <p class="count">5</p>
-            <p class="name">翻斗车</p>
-          </div>
-        </li>
-        <li class="item">
-          <div class="icon"></div>
-          <div class="meta">
-            <p class="count">4</p>
-            <p class="name">物料提升机</p>
-          </div>
-        </li>
-        <li class="item">
-          <div class="icon"></div>
-          <div class="meta">
-            <p class="count">2</p>
+            <p class="count">46</p>
             <p class="name">挖掘机</p>
+          </div>
+        </li>
+        <li class="item">
+          <div class="icon"></div>
+          <div class="meta">
+            <p class="count">38</p>
+            <p class="name">推土机</p>
+          </div>
+        </li>
+        <li class="item">
+          <div class="icon"></div>
+          <div class="meta">
+            <p class="count">15</p>
+            <p class="name">简单式启动机</p>
+          </div>
+        </li>
+        <li class="item">
+          <div class="icon"></div>
+          <div class="meta">
+            <p class="count">138</p>
+            <p class="name">塔吊</p>
+          </div>
+        </li>
+        <li class="item">
+          <div class="icon"></div>
+          <div class="meta">
+            <p class="count">98</p>
+            <p class="name">双笼人货梯</p>
           </div>
         </li>
       </ul>

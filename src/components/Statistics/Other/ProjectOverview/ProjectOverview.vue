@@ -7,7 +7,7 @@
         <div style="margin: auto; display: flex">
           <div>截止目前回款金额(万元)</div>
           <div class="symbol">￥</div>
-          <span class="value">5732</span>
+          <span class="value">128.88亿</span>
         </div>
       </div>
       <!--  实时环境  -->

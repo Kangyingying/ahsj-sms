@@ -21,7 +21,7 @@ export class LaborSummaryViewModel extends BaseChartViewModel {
       },
       xAxis: {
         type: 'category',
-        data: ['项目一', '项目一', '项目一', '项目一', '项目一', '项目一', '项目一'],
+        data: ['土方工', '架子工', '钢筋工', '木工', '混凝土工', '打桩工', '水电工'],
         axisLine: {
           lineStyle: {
             color: 'rgba(154, 182, 195, 1)',
@@ -38,8 +38,8 @@ export class LaborSummaryViewModel extends BaseChartViewModel {
       yAxis: {
         type: 'value',
         min: 0,
-        max: 30,
-        interval: 10,
+        max: 500,
+        interval: 100,
         axisLine: {
           show: true,
           lineStyle: {
@@ -59,7 +59,7 @@ export class LaborSummaryViewModel extends BaseChartViewModel {
 
       },
       series: [{
-        data: [10, 3, 30, 10, 15, 20, 15],
+        data: [500, 200, 250, 300, 50, 100, 500],
         type: 'line',
         smooth: true,
         itemStyle: {

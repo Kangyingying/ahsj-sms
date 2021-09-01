@@ -36,7 +36,7 @@ export class ProjectStatisticsViewModel extends BaseChartViewModel {
             xAxis: [
                 {
                     type: 'category',
-                    data: ['2021'],
+                    data: ['2021', '2022', '2023', '2024', '2025'],
                     axisLine: {
                         lineStyle: {
                             color: 'rgba(154, 182, 195, 1)',

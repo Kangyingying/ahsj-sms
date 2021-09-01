@@ -7,38 +7,17 @@
         <tr style="background: rgba(27, 93, 186, 0.16); border: none">
           <th>项目名称</th>
           <th>设备名称</th>
-          <th>详情</th>
           <th>到期时间</th>
         </tr>
         <tr>
-          <td>项目一</td>
-          <td>挖掘机</td>
-          <td>500</td>
-          <td>2021-08-26</td>
+          <td>科大地空中心项目</td>
+          <td>施工机械、塔吊</td>
+          <td>2021-09-20</td>
         </tr>
         <tr>
-          <td>项目一</td>
-          <td>挖掘机</td>
-          <td>500</td>
-          <td>2021-08-26</td>
-        </tr>
-        <tr>
-          <td>项目一</td>
-          <td>挖掘机</td>
-          <td>500</td>
-          <td>2021-08-26</td>
-        </tr>
-        <tr>
-          <td>项目一</td>
-          <td>挖掘机</td>
-          <td>500</td>
-          <td>2021-08-26</td>
-        </tr>
-        <tr>
-          <td>项目一</td>
-          <td>挖掘机</td>
-          <td>500</td>
-          <td>2021-08-26</td>
+          <td>安中医和平苑二期项目</td>
+          <td>施工机械、双笼人货梯</td>
+          <td>2021-09-30</td>
         </tr>
       </table>
     </div>

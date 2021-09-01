@@ -33,7 +33,7 @@ export class RectificationNoticesSummaryViewModel extends BaseChartViewModel {
       xAxis: [
         {
           type: 'category',
-          data: ['项目一', '项目一', '项目一', '项目一', '项目一'],
+          data: ['项目一', '项目二', '项目三', '项目四', '项目五'],
           axisLine: {
             lineStyle: {
               color: 'rgba(154, 182, 195, 1)',
@@ -57,8 +57,8 @@ export class RectificationNoticesSummaryViewModel extends BaseChartViewModel {
         {
           type: 'value',
           min: 0,
-          max: 30,
-          interval: 10,
+          max: 100,
+          interval: 20,
           axisLine: {
             show: false
           },
@@ -88,7 +88,7 @@ export class RectificationNoticesSummaryViewModel extends BaseChartViewModel {
             position: 'inside',
           },
           color: '#E18B54',
-          data: [20, 5, 10, 6, 15]
+          data: [46, 0, 0, 0, 0]
         },
         {
           name: '已回复',
@@ -98,7 +98,7 @@ export class RectificationNoticesSummaryViewModel extends BaseChartViewModel {
             focus: 'series'
           },
           color: '#08D4BA',
-          data: [5, 5, 5, 5, 5],
+          data: [39, 0, 0, 0, 0],
           label: {
             show: true,
             position: 'inside',

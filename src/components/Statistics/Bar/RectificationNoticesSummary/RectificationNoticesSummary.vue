@@ -1,7 +1,7 @@
 <template>
   <div class="rectification-notices-summary statistics">
-    <TitleBar :title="'整改通知汇总'"></TitleBar>
-    <p class="summary" >总计 <span>100</span> </p>
+    <TitleBar :title="'安全整改'"></TitleBar>
+    <p class="summary" >总计 <span>46</span> </p>
     <div class="chart-container"></div>
 
   </div>
